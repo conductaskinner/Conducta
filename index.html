@@ -36,19 +36,19 @@
 
       <!-- MENÚ DE NAVEGACIÓN -->
       <nav class="flex flex-wrap justify-center items-center gap-1 md:gap-2">
-        <button onclick="showTab('inicio')" id="btn-inicio" class="px-3 py-1.5 rounded-lg text-xs md:text-sm font-bold bg-indigo-600 text-white transition">
+        <button onclick="showTab('inicio')" id="btn-inicio" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-bold bg-indigo-600 text-white transition">
           <i class="fa-solid fa-house mr-1"></i> Inicio
         </button>
-        <button onclick="showTab('cursos')" id="btn-cursos" class="px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button onclick="showTab('cursos')" id="btn-cursos" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-graduation-cap mr-1"></i> Instituto (21 Cursos)
         </button>
-        <button onclick="showTab('consultorio')" id="btn-consultorio" class="px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button onclick="showTab('consultorio')" id="btn-consultorio" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-user-doctor mr-1"></i> Consultorio
         </button>
-        <button onclick="showTab('tienda')" id="btn-tienda" class="px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button onclick="showTab('tienda')" id="btn-tienda" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-book-bookmark mr-1"></i> Biblioteca
         </button>
-        <button onclick="showTab('verificar')" id="btn-verificar" class="px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button onclick="showTab('verificar')" id="btn-verificar" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-qrcode mr-1"></i> Validar Certificado
         </button>
       </nav>
@@ -64,7 +64,7 @@
   <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
 
     <!-- SECCIÓN 1: PORTADA PRINCIPAL INSTITUCIONAL -->
-    <section id="tab-inicio" class="space-y-10">
+    <section id="tab-inicio" class="tab-content space-y-10">
       <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 md:p-12 shadow-xl border border-slate-800 grid md:grid-cols-12 gap-8 items-center">
         
         <div class="md:col-span-7 space-y-5">
@@ -119,7 +119,7 @@
     </section>
 
     <!-- SECCIÓN 2: INSTITUTO - CATÁLOGO DE 21 CURSOS ORGANIZADOS POR ÁREAS -->
-    <section id="tab-cursos" class="hidden space-y-10">
+    <section id="tab-cursos" class="tab-content hidden space-y-10">
       <div class="bg-slate-900 text-white p-6 rounded-2xl border border-slate-800">
         <h2 class="text-2xl font-bold text-white"><i class="fa-solid fa-graduation-cap text-indigo-400 mr-2"></i>Instituto de Psicología Científica y Aplicada</h2>
         <p class="text-slate-400 text-xs mt-1">Catálogo completo de 21 programas de capacitación especializada con certificación digital verificable vía código QR.</p>
@@ -306,39 +306,4 @@
           <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
             <div class="space-y-2">
               <span class="bg-sky-100 text-sky-800 text-[10px] font-bold px-2 py-0.5 rounded">Orientación</span>
-              <h4 class="font-bold text-slate-900 text-sm">Diseño y Evaluación de Programas de Orientación Vocacional</h4>
-              <p class="text-slate-600 text-xs">Aplicación de baterías psicométricas, entrevista y elaboración de informes.</p>
-            </div>
-            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Orientaci%C3%B3n%20Vocacional" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="bg-sky-100 text-sky-800 text-[10px] font-bold px-2 py-0.5 rounded">Manejo de Aula</span>
-              <h4 class="font-bold text-slate-900 text-sm">Técnicas de Modificación de Conducta y Manejo de Aula</h4>
-              <p class="text-slate-600 text-xs">Estrategias eficaces para la resolución de comportamientos disruptivos.</p>
-            </div>
-            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Modificaci%C3%B3n%20de%20Conducta%20Escolar" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ÁREA 6: ÁREA ORGANIZACIONAL Y EJERCICIO PROFESIONAL -->
-      <div class="space-y-4">
-        <div class="border-b-2 border-indigo-600 pb-2 flex items-center gap-2">
-          <span class="text-2xl">🏢</span>
-          <h3 class="text-xl font-bold text-slate-900">Área Organizacional y Ejercicio Profesional</h3>
-        </div>
-        <div class="grid md:grid-cols-3 gap-4">
-          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="bg-teal-100 text-teal-800 text-[10px] font-bold px-2 py-0.5 rounded">SST</span>
-              <h4 class="font-bold text-slate-900 text-sm">Seguridad y Salud en el Trabajo (SST) y Riesgos Psicosociales</h4>
-              <p class="text-slate-600 text-xs">Evaluación y prevención del estrés laboral, síndrome de burnout y clima.</p>
-            </div>
-            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20SST%20y%20Riesgos%20Psicosociales" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
-          </div>
-
-          <div class="bg-white border border-slate-200 rounded-2
-       
-           
+              <h4 class="font
