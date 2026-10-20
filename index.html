@@ -24,7 +24,7 @@
     <div class="max-w-7xl mx-auto px-4 py-3.5 flex flex-col lg:flex-row justify-between items-center gap-3">
       
       <!-- LOGO DE LA MARCA MADRE -->
-      <div class="flex items-center space-x-3 cursor-pointer" onclick="showTab('inicio')">
+      <div class="flex items-center space-x-3 cursor-pointer tab-trigger" data-target="inicio">
         <div class="bg-indigo-600 p-2.5 rounded-xl text-white shadow-md shadow-indigo-900/50">
           <i class="fa-solid fa-brain text-2xl"></i>
         </div>
@@ -36,24 +36,24 @@
 
       <!-- MENÚ DE NAVEGACIÓN -->
       <nav class="flex flex-wrap justify-center items-center gap-1 md:gap-2">
-        <button onclick="showTab('inicio')" id="btn-inicio" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-bold bg-indigo-600 text-white transition">
+        <button id="btn-inicio" data-target="inicio" class="tab-trigger nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-bold bg-indigo-600 text-white transition">
           <i class="fa-solid fa-house mr-1"></i> Inicio
         </button>
-        <button onclick="showTab('cursos')" id="btn-cursos" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button id="btn-cursos" data-target="cursos" class="tab-trigger nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-graduation-cap mr-1"></i> Instituto (21 Cursos)
         </button>
-        <button onclick="showTab('consultorio')" id="btn-consultorio" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button id="btn-consultorio" data-target="consultorio" class="tab-trigger nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-user-doctor mr-1"></i> Consultorio
         </button>
-        <button onclick="showTab('tienda')" id="btn-tienda" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button id="btn-tienda" data-target="tienda" class="tab-trigger nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-book-bookmark mr-1"></i> Biblioteca
         </button>
-        <button onclick="showTab('verificar')" id="btn-verificar" class="nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
+        <button id="btn-verificar" data-target="verificar" class="tab-trigger nav-btn px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold text-slate-300 hover:text-white transition">
           <i class="fa-solid fa-qrcode mr-1"></i> Validar Certificado
         </button>
       </nav>
 
-      <!-- BOTÓN DE CONTACTO OFICIAL (CON TEXTO 'CONTACTAR' E ÍCONO DE WHATSAPP) -->
+      <!-- BOTÓN DE CONTACTO OFICIAL -->
       <a href="https://wa.me/51970400149?text=Hola%20CONDUCTA%2C%20deseo%20mayor%20informaci%C3%B3n" target="_blank" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition shadow-md hover:scale-105">
         <i class="fa-brands fa-whatsapp text-lg"></i> Contactar
       </a>
@@ -82,17 +82,17 @@
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-            <div onclick="showTab('cursos')" class="bg-white/5 p-3 rounded-xl border border-white/10 hover:border-indigo-400 transition cursor-pointer">
+            <div data-target="cursos" class="tab-trigger bg-white/5 p-3 rounded-xl border border-white/10 hover:border-indigo-400 transition cursor-pointer">
               <i class="fa-solid fa-graduation-cap text-indigo-400 text-lg mb-1"></i>
               <h4 class="font-bold text-xs text-white">Instituto</h4>
               <p class="text-[11px] text-slate-400">21 Cursos Especializados</p>
             </div>
-            <div onclick="showTab('consultorio')" class="bg-white/5 p-3 rounded-xl border border-white/10 hover:border-indigo-400 transition cursor-pointer">
+            <div data-target="consultorio" class="tab-trigger bg-white/5 p-3 rounded-xl border border-white/10 hover:border-indigo-400 transition cursor-pointer">
               <i class="fa-solid fa-user-doctor text-indigo-400 text-lg mb-1"></i>
               <h4 class="font-bold text-xs text-white">Consultorio</h4>
               <p class="text-[11px] text-slate-400">Atención Clínica Especializada</p>
             </div>
-            <div onclick="showTab('tienda')" class="bg-white/5 p-3 rounded-xl border border-white/10 hover:border-indigo-400 transition cursor-pointer">
+            <div data-target="tienda" class="tab-trigger bg-white/5 p-3 rounded-xl border border-white/10 hover:border-indigo-400 transition cursor-pointer">
               <i class="fa-solid fa-book-bookmark text-indigo-400 text-lg mb-1"></i>
               <h4 class="font-bold text-xs text-white">Biblioteca</h4>
               <p class="text-[11px] text-slate-400">Pruebas, Test y Literatura</p>
@@ -118,7 +118,7 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 2: INSTITUTO - CATÁLOGO DE 21 CURSOS ORGANIZADOS POR ÁREAS -->
+    <!-- SECCIÓN 2: INSTITUTO - CATÁLOGO DE 21 CURSOS -->
     <section id="tab-cursos" class="tab-content hidden space-y-10">
       <div class="bg-slate-900 text-white p-6 rounded-2xl border border-slate-800">
         <h2 class="text-2xl font-bold text-white"><i class="fa-solid fa-graduation-cap text-indigo-400 mr-2"></i>Instituto de Psicología Científica y Aplicada</h2>
@@ -141,4 +141,266 @@
             <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Gesti%C3%B3n%20de%20Servicios%20de%20Salud%20Mental" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
           </div>
 
-          <div class="bg-white border border
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded">Emergencias</span>
+              <h4 class="font-bold text-slate-900 text-sm">Primeros Auxilios Psicológicos (PAP) e Intervención en Crisis</h4>
+              <p class="text-slate-600 text-xs">Protocolos de emergencia y abordaje inmediato en situaciones críticas.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Primeros%20Auxilios%20Psicol%C3%B3gicos" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded">Normativa Legal</span>
+              <h4 class="font-bold text-slate-900 text-sm">Abordaje e Intervención en Violencia Familiar y de Género</h4>
+              <p class="text-slate-600 text-xs">Aplicación de la Ley 30364 y llenado de fichas de valoración de riesgo.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Violencia%20Familiar%20y%20de%20G%C3%A9nero" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded">Prevención</span>
+              <h4 class="font-bold text-slate-900 text-sm">Prevención e Intervención en Conducta Suicida y Autolesiones</h4>
+              <p class="text-slate-600 text-xs">Protocolos de evaluación, triaje y manejo clínico del riesgo de suicidio.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Conducta%20Suicida" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded">Intervención</span>
+              <h4 class="font-bold text-slate-900 text-sm">Prevención e Intervención en Adicciones</h4>
+              <p class="text-slate-600 text-xs">Tratamiento en adicciones a sustancias y adicciones conductuales.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Intervenci%C3%B3n%20en%20Adicciones" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÁREA 2: PSICOLOGÍA FORENSE Y JURÍDICA -->
+      <div class="space-y-4">
+        <div class="border-b-2 border-indigo-600 pb-2 flex items-center gap-2">
+          <span class="text-2xl">⚖️</span>
+          <h3 class="text-xl font-bold text-slate-900">Psicología Forense y Jurídica (Poder Judicial / MIMP / DEMUNA)</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">Peritaje</span>
+              <h4 class="font-bold text-slate-900 text-sm">Elaboración de Informes Psicológicos Periciales y Forenses</h4>
+              <p class="text-slate-600 text-xs">Redacción técnica, estructura pericial y ratificación/sustento legal.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Informes%20Periciales" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">Protección Infantil</span>
+              <h4 class="font-bold text-slate-900 text-sm">Evaluación e Intervención en Abuso Sexual Infantil (ASI)</h4>
+              <p class="text-slate-600 text-xs">Técnicas de entrevista forense, credibilidad del testimonio y protección.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Abuso%20Sexual%20Infantil" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">Criminología</span>
+              <h4 class="font-bold text-slate-900 text-sm">Psicología Criminal y Perfilación Delictiva</h4>
+              <p class="text-slate-600 text-xs">Análisis conductual criminal, evaluación de la peligrosidad y reincidencia.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Psicolog%C3%ADa%20Criminal" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÁREA 3: TERAPIAS BASADAS EN EVIDENCIA (CLÍNICA) -->
+      <div class="space-y-4">
+        <div class="border-b-2 border-indigo-600 pb-2 flex items-center gap-2">
+          <span class="text-2xl">🧠</span>
+          <h3 class="text-xl font-bold text-slate-900">Terapias Basadas en Evidencia (Clínica)</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Contextual</span>
+              <h4 class="font-bold text-slate-900 text-sm">Terapia de Aceptación y Compromiso (ACT)</h4>
+              <p class="text-slate-600 text-xs">Flexibilidad psicológica en el manejo clínico de ansiedad y depresión.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20ACT" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Tercera Generación</span>
+              <h4 class="font-bold text-slate-900 text-sm">Terapia Dialéctico Conductual (DBT)</h4>
+              <p class="text-slate-600 text-xs">Abordaje en Trastorno Límite de la Personalidad (TLP) y desregulación emocional.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20DBT" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Infanto-Juvenil</span>
+              <h4 class="font-bold text-slate-900 text-sm">Terapia Cognitivo-Conductual (TCC) en Niños y Adolescentes</h4>
+              <p class="text-slate-600 text-xs">Técnicas de modificación de conducta y restructuración cognitiva en jóvenes.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20TCC%20Infanto%20Juvenil" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÁREA 4: NEUROPSICOLOGÍA Y NEURODESARROLLO -->
+      <div class="space-y-4">
+        <div class="border-b-2 border-indigo-600 pb-2 flex items-center gap-2">
+          <span class="text-2xl">🧩</span>
+          <h3 class="text-xl font-bold text-slate-900">Neuropsicología y Neurodesarrollo</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-0.5 rounded">Neurodesarrollo</span>
+              <h4 class="font-bold text-slate-900 text-sm">Evaluación y Diagnóstico del Trastorno del Espectro Autista (TEA)</h4>
+              <p class="text-slate-600 text-xs">Uso y aplicación clínica de pruebas estandarizadas ADOS-2 y ADI-R.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20TEA%20ADOS-2" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-0.5 rounded">Diagnóstico</span>
+              <h4 class="font-bold text-slate-900 text-sm">Diagnóstico y Manejo Conductual del TDAH</h4>
+              <p class="text-slate-600 text-xs">Estrategias de intervención conductual y de soporte para el aula y el hogar.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20TDAH" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-0.5 rounded">Aprendizaje</span>
+              <h4 class="font-bold text-slate-900 text-sm">Evaluación e Intervención Neuropsicológica en Problemas del Aprendizaje</h4>
+              <p class="text-slate-600 text-xs">Abordaje en dislexia, discalculia y estimulación de funciones ejecutivas.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Problemas%20del%20Aprendizaje" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÁREA 5: PSICOLOGÍA EDUCATIVA -->
+      <div class="space-y-4">
+        <div class="border-b-2 border-indigo-600 pb-2 flex items-center gap-2">
+          <span class="text-2xl">🏫</span>
+          <h3 class="text-xl font-bold text-slate-900">Psicología Educativa (MINEDU / UGEL / Colegios)</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="bg-sky-100 text-sky-800 text-[10px] font-bold px-2 py-0.5 rounded">Convivencia Escolar</span>
+              <h4 class="font-bold text-slate-900 text-sm">Prevención e Intervención en Bullying y Convivencia Escolar</h4>
+              <p class="text-slate-600 text-xs">Manejo del sistema SíSeVe, protocolos oficiales y elaboración de planes.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Consulta%20sobre%20Curso%3A%20Bullying%20y%20SiSeVe" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-xl text-center block">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: CONSULTORIO CLÍNICO -->
+    <section id="tab-consultorio" class="tab-content hidden space-y-6">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+        <h2 class="text-2xl font-bold text-slate-900"><i class="fa-solid fa-user-doctor text-indigo-600 mr-2"></i>Consultorio Psicológico</h2>
+        <p class="text-slate-600 text-sm mt-1">Atención psicológica individual, de pareja y familiar basada en evidencia científica.</p>
+        
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+          <div class="border border-slate-100 p-4 rounded-xl bg-slate-50">
+            <h3 class="font-bold text-indigo-900 mb-2"><i class="fa-solid fa-stethoscope mr-2"></i>Servicios Clínicos</h3>
+            <ul class="space-y-2 text-xs text-slate-700">
+              <li>• Evaluación y Diagnóstico Clínico</li>
+              <li>• Terapia para Ansiedad, Depresión y Estrés</li>
+              <li>• Intervención en Crisis y Apoyo Emocional</li>
+              <li>• Terapia de Pareja y Familia</li>
+            </ul>
+          </div>
+          <div class="border border-slate-100 p-4 rounded-xl bg-slate-50 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-indigo-900 mb-2"><i class="fa-solid fa-calendar-check mr-2"></i>Agendar Cita</h3>
+              <p class="text-xs text-slate-600">Modalidad presencial y virtual según disponibilidad.</p>
+            </div>
+            <a href="https://wa.me/51970400149?text=Hola%2C%20deseo%20agendar%20una%20consulta%20psicol%C3%B3gica" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 px-4 rounded-xl text-center block">Agendar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: BIBLIOTECA -->
+    <section id="tab-tienda" class="tab-content hidden space-y-6">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+        <h2 class="text-2xl font-bold text-slate-900"><i class="fa-solid fa-book-bookmark text-indigo-600 mr-2"></i>Biblioteca Especializada</h2>
+        <p class="text-slate-600 text-sm mt-1">Recursos, pruebas psicométricas y manuales de consulta para profesionales.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: VALIDAR CERTIFICADO -->
+    <section id="tab-verificar" class="tab-content hidden space-y-6">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 max-w-xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-slate-900"><i class="fa-solid fa-qrcode text-indigo-600 mr-2"></i>Validación de Certificados</h2>
+        <p class="text-slate-600 text-xs mt-2">Ingrese el código de verificación para validar la autenticidad del documento.</p>
+        
+        <div class="mt-6 flex gap-2">
+          <input type="text" placeholder="Ej: COND-2026-001" class="border border-slate-300 rounded-xl px-4 py-2 text-sm w-full focus:outline-none focus:border-indigo-600">
+          <button class="bg-indigo-600 text-white text-xs font-bold px-5 py-2 rounded-xl hover:bg-indigo-700 transition">Verificar</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 text-center mt-auto">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>© 2026 CONDUCTA - Psicología Científica y Aplicada. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DE NAVEGACIÓN COMPATIBLE -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const triggers = document.querySelectorAll('.tab-trigger');
+      const contents = document.querySelectorAll('.tab-content');
+      const navButtons = document.querySelectorAll('.nav-btn');
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          const target = this.getAttribute('data-target');
+          if (!target) return;
+
+          // Ocultar todas las pestañas
+          contents.forEach(function (content) {
+            content.classList.add('hidden');
+          });
+
+          // Resetear botones del menú
+          navButtons.forEach(function (btn) {
+            btn.classList.remove('bg-indigo-600', 'text-white', 'font-bold');
+            btn.classList.add('text-slate-300', 'font-semibold');
+          });
+
+          // Mostrar la pestaña objetivo
+          const activeTab = document.getElementById('tab-' + target);
+          if (activeTab) {
+            activeTab.classList.remove('hidden');
+          }
+
+          // Activar el botón del menú
+          const activeBtn = document.getElementById('btn-' + target);
+          if (activeBtn) {
+            activeBtn.classList.remove('text-slate-300', 'font-semibold');
+            activeBtn.classList.add('bg-indigo-600', 'text-white', 'font-bold');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
